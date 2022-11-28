@@ -17,6 +17,7 @@ public class Admin_login extends javax.swing.JFrame {
      */
     public Admin_login() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -35,8 +36,9 @@ public class Admin_login extends javax.swing.JFrame {
         enter_username_lbl = new javax.swing.JLabel();
         admin_password = new javax.swing.JPasswordField();
         admin_username1 = new javax.swing.JTextField();
-        Exit = new javax.swing.JButton();
+        Home = new javax.swing.JButton();
         warning_lbl = new javax.swing.JLabel();
+        exit = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -133,20 +135,30 @@ public class Admin_login extends javax.swing.JFrame {
         });
         getContentPane().add(admin_username1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 145, 116, 20));
 
-        Exit.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        Exit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/icons8-home-page-20.png"))); // NOI18N
-        Exit.setText("Home");
-        Exit.addActionListener(new java.awt.event.ActionListener() {
+        Home.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Home.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/icons8-home-page-20.png"))); // NOI18N
+        Home.setText("Home");
+        Home.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ExitActionPerformed(evt);
+                HomeActionPerformed(evt);
             }
         });
-        getContentPane().add(Exit, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, 30));
+        getContentPane().add(Home, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 30));
 
         warning_lbl.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
         warning_lbl.setForeground(new java.awt.Color(0, 102, 255));
         warning_lbl.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         getContentPane().add(warning_lbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 120, 150, 20));
+
+        exit.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        exit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/icons8-close-30.png"))); // NOI18N
+        exit.setText("Exit");
+        exit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                exitActionPerformed(evt);
+            }
+        });
+        getContentPane().add(exit, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 0, 90, 30));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/login page.jpg"))); // NOI18N
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 310, 340));
@@ -185,8 +197,8 @@ public class Admin_login extends javax.swing.JFrame {
         
     }//GEN-LAST:event_login_adminActionPerformed
 
-    private void ExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExitActionPerformed
-        int response = JOptionPane.showConfirmDialog(null, "Are you sure you want to exit", "submit", JOptionPane.YES_NO_OPTION);
+    private void HomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HomeActionPerformed
+        int response = JOptionPane.showConfirmDialog(null, "Are you sure you want to leave this page?", "submit", JOptionPane.YES_NO_OPTION);
         
         if(response ==0 ){
             setVisible(false);
@@ -195,7 +207,7 @@ public class Admin_login extends javax.swing.JFrame {
             frame.setLocationRelativeTo(null);
         }
 
-    }//GEN-LAST:event_ExitActionPerformed
+    }//GEN-LAST:event_HomeActionPerformed
 
     private void admin_passwordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_admin_passwordActionPerformed
         
@@ -210,9 +222,9 @@ public class Admin_login extends javax.swing.JFrame {
         show_password.setContentAreaFilled(false);
         show_password.setBorderPainted(false);
         
-        Exit.setOpaque(false);
-        Exit.setContentAreaFilled(false);
-        Exit.setBorderPainted(false);
+        Home.setOpaque(false);
+        Home.setContentAreaFilled(false);
+        Home.setBorderPainted(false);
     }//GEN-LAST:event_formComponentShown
 
     private void show_passwordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_show_passwordActionPerformed
@@ -264,6 +276,14 @@ public class Admin_login extends javax.swing.JFrame {
         warning_lbl.setText("");
     }//GEN-LAST:event_admin_passwordKeyReleased
 
+    private void exitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitActionPerformed
+        int response = JOptionPane.showConfirmDialog(this, "You sure you want to exit", "Submit", JOptionPane.YES_NO_OPTION);
+
+        if(response == 0){
+            System.exit(0);
+        }
+    }//GEN-LAST:event_exitActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -300,11 +320,12 @@ public class Admin_login extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton Exit;
+    private javax.swing.JButton Home;
     private javax.swing.JPasswordField admin_password;
     private javax.swing.JTextField admin_username;
     private javax.swing.JTextField admin_username1;
     private javax.swing.JLabel enter_username_lbl;
+    private javax.swing.JButton exit;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JButton login_admin;

@@ -17,6 +17,7 @@ public class Admin_frame extends javax.swing.JFrame {
      */
     public Admin_frame() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -37,8 +38,15 @@ public class Admin_frame extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         back = new javax.swing.JButton();
+        exit1 = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        addComponentListener(new java.awt.event.ComponentAdapter() {
+            public void componentShown(java.awt.event.ComponentEvent evt) {
+                formComponentShown(evt);
+            }
+        });
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         add_student.setText("Add student");
@@ -90,22 +98,39 @@ public class Admin_frame extends javax.swing.JFrame {
         getContentPane().add(exit, new org.netbeans.lib.awtextra.AbsoluteConstraints(175, 261, -1, -1));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Student information");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 29, 388, -1));
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Student results' information");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 138, 388, -1));
 
-        back.setText("back");
+        back.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/icons8-back-arrow-30.png"))); // NOI18N
         back.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backActionPerformed(evt);
             }
         });
-        getContentPane().add(back, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        getContentPane().add(back, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 40, 30));
+
+        exit1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        exit1.setForeground(new java.awt.Color(255, 255, 255));
+        exit1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/icons8-close-30.png"))); // NOI18N
+        exit1.setText("Exit");
+        exit1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                exit1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(exit1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 0, 90, 30));
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/schoolPic1.jpg"))); // NOI18N
+        jLabel3.setText("jLabel3");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(-900, -460, 1300, 760));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -156,6 +181,24 @@ public class Admin_frame extends javax.swing.JFrame {
         frame.setLocationRelativeTo(null);
     }//GEN-LAST:event_update_resultsActionPerformed
 
+    private void formComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_formComponentShown
+        back.setOpaque(false);
+        back.setContentAreaFilled(false);
+        back.setBorderPainted(false);
+        
+        exit.setOpaque(false);
+        exit.setContentAreaFilled(false);
+        exit.setBorderPainted(false);
+    }//GEN-LAST:event_formComponentShown
+
+    private void exit1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exit1ActionPerformed
+        int response = JOptionPane.showConfirmDialog(this, "You sure you want to exit", "Submit", JOptionPane.YES_NO_OPTION);
+
+        if(response == 0){
+            System.exit(0);
+        }
+    }//GEN-LAST:event_exit1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -196,8 +239,10 @@ public class Admin_frame extends javax.swing.JFrame {
     private javax.swing.JButton add_student;
     private javax.swing.JButton back;
     private javax.swing.JButton exit;
+    private javax.swing.JButton exit1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JButton list_result;
     private javax.swing.JButton list_student;
     private javax.swing.JButton update_results;

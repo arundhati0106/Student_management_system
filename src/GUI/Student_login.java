@@ -21,6 +21,7 @@ public class Student_login extends javax.swing.JFrame {
      */
     public Student_login() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -36,21 +37,31 @@ public class Student_login extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         search_btn = new javax.swing.JButton();
         rollno_txt = new javax.swing.JTextField();
-        Exit = new javax.swing.JButton();
+        home = new javax.swing.JButton();
+        exit = new javax.swing.JButton();
+        message = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(300, 400));
+        setPreferredSize(new java.awt.Dimension(320, 320));
+        addComponentListener(new java.awt.event.ComponentAdapter() {
+            public void componentShown(java.awt.event.ComponentEvent evt) {
+                formComponentShown(evt);
+            }
+        });
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel1.setBackground(new java.awt.Color(255, 255, 255));
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Student Result Page");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 20, 300, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 300, -1));
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel3.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("Enter roll no.");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 300, -1));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 130, 300, 30));
 
         search_btn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/icons8-search-30.png"))); // NOI18N
         search_btn.addActionListener(new java.awt.event.ActionListener() {
@@ -58,18 +69,54 @@ public class Student_login extends javax.swing.JFrame {
                 search_btnActionPerformed(evt);
             }
         });
-        getContentPane().add(search_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 90, 30, 30));
+        getContentPane().add(search_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 180, 30, 30));
 
         rollno_txt.setPreferredSize(new java.awt.Dimension(64, 28));
-        getContentPane().add(rollno_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 90, 130, 30));
-
-        Exit.setText("Exit");
-        Exit.addActionListener(new java.awt.event.ActionListener() {
+        rollno_txt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ExitActionPerformed(evt);
+                rollno_txtActionPerformed(evt);
             }
         });
-        getContentPane().add(Exit, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 150, -1, -1));
+        rollno_txt.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                rollno_txtKeyReleased(evt);
+            }
+        });
+        getContentPane().add(rollno_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 180, 130, 30));
+
+        home.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        home.setForeground(new java.awt.Color(255, 255, 255));
+        home.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/icons8-home-page-20.png"))); // NOI18N
+        home.setText("Home");
+        home.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                homeActionPerformed(evt);
+            }
+        });
+        getContentPane().add(home, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 100, 30));
+
+        exit.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        exit.setForeground(new java.awt.Color(255, 255, 255));
+        exit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/icons8-close-30.png"))); // NOI18N
+        exit.setText("Exit");
+        exit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                exitActionPerformed(evt);
+            }
+        });
+        getContentPane().add(exit, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 0, 90, 30));
+
+        message.setFont(new java.awt.Font("Segoe UI", 2, 12)); // NOI18N
+        message.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        message.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                messageKeyReleased(evt);
+            }
+        });
+        getContentPane().add(message, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 160, 200, 20));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/schoolPic1.jpg"))); // NOI18N
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-1070, -680, 1770, 1040));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -81,8 +128,16 @@ public class Student_login extends javax.swing.JFrame {
             Statement st = con.prepareStatement("create", ResultSet.TYPE_SCROLL_SENSITIVE,
                 ResultSet.CONCUR_UPDATABLE);
             ResultSet rs = st.executeQuery("select * from result where rollNo='"+rollNo+"'");
+            
             if(!rs.first()){
-                JOptionPane.showMessageDialog(null, "Entered rollNo doesn't exist");
+                if(rollno_txt.getText().isEmpty()){
+                    message.setText("Enter a rollNo.");
+                }
+                
+                else{
+                    message.setText("Entered rollNo doesn't exist!");
+                }
+                //JOptionPane.showMessageDialog(this, "Entered rollNo doesn't exist");
             }
             else{
                 Result frame = new Result(rollNo);
@@ -91,12 +146,12 @@ public class Student_login extends javax.swing.JFrame {
             }
         }
         catch(Exception e){
-            JOptionPane.showMessageDialog(null, e.toString());
+            JOptionPane.showMessageDialog(this, e.toString());
         }
     }//GEN-LAST:event_search_btnActionPerformed
 
-    private void ExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExitActionPerformed
-        int response = JOptionPane.showConfirmDialog(null, "Are you sure you want to exit", "submit", JOptionPane.YES_NO_OPTION);
+    private void homeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homeActionPerformed
+        int response = JOptionPane.showConfirmDialog(this, "Are you sure you want to leave this page?", "submit", JOptionPane.YES_NO_OPTION);
 
         if(response ==0 ){
             setVisible(false);
@@ -104,7 +159,37 @@ public class Student_login extends javax.swing.JFrame {
             frame.setVisible(true);
             frame.setLocationRelativeTo(null);
         }
-    }//GEN-LAST:event_ExitActionPerformed
+    }//GEN-LAST:event_homeActionPerformed
+
+    private void exitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitActionPerformed
+        int response = JOptionPane.showConfirmDialog(this, "You sure you want to exit", "Submit", JOptionPane.YES_NO_OPTION);
+
+        if(response == 0){
+            System.exit(0);
+        }
+    }//GEN-LAST:event_exitActionPerformed
+
+    private void formComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_formComponentShown
+        home.setOpaque(false);
+        home.setContentAreaFilled(false);
+        home.setBorderPainted(false);
+        
+        exit.setOpaque(false);
+        exit.setContentAreaFilled(false);
+        exit.setBorderPainted(false);
+    }//GEN-LAST:event_formComponentShown
+
+    private void messageKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_messageKeyReleased
+        
+    }//GEN-LAST:event_messageKeyReleased
+
+    private void rollno_txtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rollno_txtActionPerformed
+        
+    }//GEN-LAST:event_rollno_txtActionPerformed
+
+    private void rollno_txtKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_rollno_txtKeyReleased
+        message.setText("");
+    }//GEN-LAST:event_rollno_txtKeyReleased
 
     /**
      * @param args the command line arguments
@@ -142,9 +227,12 @@ public class Student_login extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton Exit;
+    private javax.swing.JButton exit;
+    private javax.swing.JButton home;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel message;
     private javax.swing.JTextField rollno_txt;
     private javax.swing.JButton search_btn;
     // End of variables declaration//GEN-END:variables

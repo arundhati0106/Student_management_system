@@ -52,16 +52,24 @@ public class Insert_result extends javax.swing.JFrame {
         chemistry = new javax.swing.JTextField();
         physics = new javax.swing.JTextField();
         submit = new javax.swing.JButton();
-        back = new javax.swing.JButton();
         Refresh = new javax.swing.JButton();
+        exit = new javax.swing.JButton();
+        back1 = new javax.swing.JButton();
+        jLabel8 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(550, 550));
+        addComponentListener(new java.awt.event.ComponentAdapter() {
+            public void componentShown(java.awt.event.ComponentEvent evt) {
+                formComponentShown(evt);
+            }
+        });
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Roll no");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 20, 50, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 25, 50, -1));
 
         search_btn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/icons8-search-30.png"))); // NOI18N
         search_btn.addActionListener(new java.awt.event.ActionListener() {
@@ -92,21 +100,27 @@ public class Insert_result extends javax.swing.JFrame {
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, 510, 70));
 
+        jLabel2.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
         jLabel2.setText("Physics");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 170, -1, -1));
 
+        jLabel3.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
         jLabel3.setText("Chemistry");
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 210, -1, -1));
 
+        jLabel4.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
         jLabel4.setText("Maths");
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 250, -1, -1));
 
+        jLabel5.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
         jLabel5.setText("English");
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 290, -1, -1));
 
+        jLabel6.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
         jLabel6.setText("Soft Skills");
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 330, -1, -1));
 
+        jLabel7.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
         jLabel7.setText("Aptitude");
         getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 370, -1, -1));
         getContentPane().add(aptitude, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 370, 110, -1));
@@ -122,6 +136,7 @@ public class Insert_result extends javax.swing.JFrame {
         });
         getContentPane().add(physics, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 170, 110, -1));
 
+        submit.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         submit.setText("Submit");
         submit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -130,14 +145,7 @@ public class Insert_result extends javax.swing.JFrame {
         });
         getContentPane().add(submit, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 440, -1, -1));
 
-        back.setText("back");
-        back.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                backActionPerformed(evt);
-            }
-        });
-        getContentPane().add(back, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
-
+        Refresh.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         Refresh.setText("Refresh");
         Refresh.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -145,6 +153,30 @@ public class Insert_result extends javax.swing.JFrame {
             }
         });
         getContentPane().add(Refresh, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 440, -1, -1));
+
+        exit.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        exit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/icons8-close-30.png"))); // NOI18N
+        exit.setText("Exit");
+        exit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                exitActionPerformed(evt);
+            }
+        });
+        getContentPane().add(exit, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 10, 90, 30));
+
+        back1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/icons8-back-arrow-30.png"))); // NOI18N
+        back1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                back1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(back1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 40, 30));
+
+        jLabel8.setBackground(new java.awt.Color(255, 204, 204));
+        jLabel8.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 204, 255));
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/schoolPic2.png"))); // NOI18N
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(-140, -180, 1080, 760));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -172,7 +204,7 @@ public class Insert_result extends javax.swing.JFrame {
             
             //if query, doesnt't return a value, i.e. doesn't find a row where roll no = 'rollno', show error message
             if(!rs.first()){
-                JOptionPane.showMessageDialog(null, "Entered RollNo. doesn't exist");
+                JOptionPane.showMessageDialog(this, "Entered RollNo. doesn't exist");
             }
             else{  
                 //else -> student with mentioned roll no found, now input marks, and disable the editing feature of roll no,
@@ -181,7 +213,7 @@ public class Insert_result extends javax.swing.JFrame {
             }
         }
         catch(Exception e){
-            JOptionPane.showMessageDialog(null, e.toString());
+            JOptionPane.showMessageDialog(this, e.toString());
         }
     }//GEN-LAST:event_search_btnActionPerformed
 
@@ -200,24 +232,16 @@ public class Insert_result extends javax.swing.JFrame {
             Connection con = Connection_code.get_con();
             Statement st = con.createStatement();
             st.executeUpdate("insert into result values("+ rollno + ", " + physicsMarks +", "+ mathsMarks +", "+ chemMarks +", "+ aptitudemarks +", "+ englishmarks + ", " + softskillmarks + ", " + total + ")");
-            JOptionPane.showMessageDialog(null, "Added Successfully");
+            JOptionPane.showMessageDialog(this, "Added Successfully");
             setVisible(false);
             Insert_result frame = new Insert_result();
             frame.setVisible(true);
             frame.setLocationRelativeTo(null);
         }
         catch(Exception e){
-            JOptionPane.showMessageDialog(null, e.toString());
+            JOptionPane.showMessageDialog(this, e.toString());
         }
     }//GEN-LAST:event_submitActionPerformed
-
-    private void backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backActionPerformed
-        int response = JOptionPane.showConfirmDialog(null, "You sure you want to leave this page", "Submit", JOptionPane.YES_NO_OPTION);
-        
-        if(response == 0){
-            setVisible(false);
-        }
-    }//GEN-LAST:event_backActionPerformed
 
     private void RefreshActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RefreshActionPerformed
         rollno_txt.setEditable(true);
@@ -226,6 +250,32 @@ public class Insert_result extends javax.swing.JFrame {
 //        DefaultTableModel model = new DefaultTableModel();
 //        display.setModel(model);
     }//GEN-LAST:event_RefreshActionPerformed
+
+    private void exitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitActionPerformed
+        int response = JOptionPane.showConfirmDialog(this, "You sure you want to exit", "Submit", JOptionPane.YES_NO_OPTION);
+
+        if(response == 0){
+            System.exit(0);
+        }
+    }//GEN-LAST:event_exitActionPerformed
+
+    private void back1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_back1ActionPerformed
+        int response = JOptionPane.showConfirmDialog(this, "You sure you want to leave this page", "Submit", JOptionPane.YES_NO_OPTION);
+
+        if(response == 0){
+            setVisible(false);
+        }
+    }//GEN-LAST:event_back1ActionPerformed
+
+    private void formComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_formComponentShown
+        back1.setOpaque(false);
+        back1.setContentAreaFilled(false);
+        back1.setBorderPainted(false);
+        
+        exit.setOpaque(false);
+        exit.setContentAreaFilled(false);
+        exit.setBorderPainted(false);
+    }//GEN-LAST:event_formComponentShown
 
     /**
      * @param args the command line arguments
@@ -265,10 +315,11 @@ public class Insert_result extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Refresh;
     private javax.swing.JTextField aptitude;
-    private javax.swing.JButton back;
+    private javax.swing.JButton back1;
     private javax.swing.JTextField chemistry;
     private javax.swing.JTable display;
     private javax.swing.JTextField english;
+    private javax.swing.JButton exit;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -276,6 +327,7 @@ public class Insert_result extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField maths;
     private javax.swing.JTextField physics;

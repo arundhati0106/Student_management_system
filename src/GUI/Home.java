@@ -4,6 +4,8 @@
  */
 package GUI;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author arund
@@ -29,9 +31,17 @@ public class Home extends javax.swing.JFrame {
 
         student = new javax.swing.JButton();
         admin = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        exit = new javax.swing.JButton();
         login_image = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(430, 330));
+        addComponentListener(new java.awt.event.ComponentAdapter() {
+            public void componentShown(java.awt.event.ComponentEvent evt) {
+                formComponentShown(evt);
+            }
+        });
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         student.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/icons8-schoolboy-at-a-desk-30.png"))); // NOI18N
@@ -41,7 +51,7 @@ public class Home extends javax.swing.JFrame {
                 studentActionPerformed(evt);
             }
         });
-        getContentPane().add(student, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 90, 105, -1));
+        getContentPane().add(student, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 190, 105, -1));
 
         admin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/icons8-admin-settings-male-30.png"))); // NOI18N
         admin.setText("Admin");
@@ -50,11 +60,28 @@ public class Home extends javax.swing.JFrame {
                 adminActionPerformed(evt);
             }
         });
-        getContentPane().add(admin, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 190, 105, -1));
+        getContentPane().add(admin, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 190, 105, -1));
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("Welcome!!!");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, 400, -1));
+
+        exit.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        exit.setForeground(new java.awt.Color(255, 255, 255));
+        exit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/icons8-close-30.png"))); // NOI18N
+        exit.setText("Exit");
+        exit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                exitActionPerformed(evt);
+            }
+        });
+        getContentPane().add(exit, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 0, 90, 30));
 
         login_image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/schoolPic2.png"))); // NOI18N
         login_image.setText("jLabel1");
-        getContentPane().add(login_image, new org.netbeans.lib.awtextra.AbsoluteConstraints(-150, -10, 590, 400));
+        getContentPane().add(login_image, new org.netbeans.lib.awtextra.AbsoluteConstraints(-180, -10, 620, 340));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -72,6 +99,20 @@ public class Home extends javax.swing.JFrame {
         frame.setVisible(true);
         frame.setLocationRelativeTo(null);
     }//GEN-LAST:event_studentActionPerformed
+
+    private void formComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_formComponentShown
+        exit.setOpaque(false);
+//        exit.setContentAreaFilled(false);
+//        exit.setBorderPainted(false);
+    }//GEN-LAST:event_formComponentShown
+
+    private void exitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitActionPerformed
+        int response = JOptionPane.showConfirmDialog(this, "You sure you want to exit", "Submit", JOptionPane.YES_NO_OPTION);
+
+        if(response == 0){
+            System.exit(0);
+        }
+    }//GEN-LAST:event_exitActionPerformed
 
     /**
      * @param args the command line arguments
@@ -110,6 +151,8 @@ public class Home extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton admin;
+    private javax.swing.JButton exit;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel login_image;
     private javax.swing.JButton student;
     // End of variables declaration//GEN-END:variables
