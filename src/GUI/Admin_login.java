@@ -225,6 +225,10 @@ public class Admin_login extends javax.swing.JFrame {
         Home.setOpaque(false);
         Home.setContentAreaFilled(false);
         Home.setBorderPainted(false);
+        
+        exit.setOpaque(false);
+        exit.setContentAreaFilled(false);
+        exit.setBorderPainted(false);
     }//GEN-LAST:event_formComponentShown
 
     private void show_passwordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_show_passwordActionPerformed

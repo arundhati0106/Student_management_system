@@ -77,7 +77,7 @@ public class Home extends javax.swing.JFrame {
                 exitActionPerformed(evt);
             }
         });
-        getContentPane().add(exit, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 0, 90, 30));
+        getContentPane().add(exit, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 10, 90, 30));
 
         login_image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/schoolPic2.png"))); // NOI18N
         login_image.setText("jLabel1");
@@ -102,8 +102,8 @@ public class Home extends javax.swing.JFrame {
 
     private void formComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_formComponentShown
         exit.setOpaque(false);
-//        exit.setContentAreaFilled(false);
-//        exit.setBorderPainted(false);
+        exit.setContentAreaFilled(false);
+        exit.setBorderPainted(false);
     }//GEN-LAST:event_formComponentShown
 
     private void exitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitActionPerformed

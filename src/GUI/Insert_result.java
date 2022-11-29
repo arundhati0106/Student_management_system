@@ -247,8 +247,8 @@ public class Insert_result extends javax.swing.JFrame {
         rollno_txt.setEditable(true);
         rollno_txt.setText("");
 //        
-//        DefaultTableModel model = new DefaultTableModel();
-//        display.setModel(model);
+        DefaultTableModel model = new DefaultTableModel();
+        display.setModel(model);
     }//GEN-LAST:event_RefreshActionPerformed
 
     private void exitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitActionPerformed

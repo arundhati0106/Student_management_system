@@ -97,14 +97,14 @@ public class Admin_frame extends javax.swing.JFrame {
         });
         getContentPane().add(exit, new org.netbeans.lib.awtextra.AbsoluteConstraints(175, 261, -1, -1));
 
+        jLabel1.setBackground(new java.awt.Color(0, 0, 0));
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Student information");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 29, 388, -1));
 
+        jLabel2.setBackground(new java.awt.Color(0, 0, 0));
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Student results' information");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 138, 388, -1));
@@ -118,7 +118,6 @@ public class Admin_frame extends javax.swing.JFrame {
         getContentPane().add(back, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 40, 30));
 
         exit1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        exit1.setForeground(new java.awt.Color(255, 255, 255));
         exit1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/icons8-close-30.png"))); // NOI18N
         exit1.setText("Exit");
         exit1.addActionListener(new java.awt.event.ActionListener() {
@@ -130,7 +129,7 @@ public class Admin_frame extends javax.swing.JFrame {
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/schoolPic1.jpg"))); // NOI18N
         jLabel3.setText("jLabel3");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(-900, -460, 1300, 760));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(-1090, -560, 1510, 880));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -186,9 +185,9 @@ public class Admin_frame extends javax.swing.JFrame {
         back.setContentAreaFilled(false);
         back.setBorderPainted(false);
         
-        exit.setOpaque(false);
-        exit.setContentAreaFilled(false);
-        exit.setBorderPainted(false);
+        exit1.setOpaque(false);
+        exit1.setContentAreaFilled(false);
+        exit1.setBorderPainted(false);
     }//GEN-LAST:event_formComponentShown
 
     private void exit1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exit1ActionPerformed
