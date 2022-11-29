@@ -37,7 +37,6 @@ public class Admin_frame extends javax.swing.JFrame {
         exit = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        back = new javax.swing.JButton();
         exit1 = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
 
@@ -89,13 +88,14 @@ public class Admin_frame extends javax.swing.JFrame {
         });
         getContentPane().add(update_results, new org.netbeans.lib.awtextra.AbsoluteConstraints(152, 211, 109, -1));
 
+        exit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/icons8-login-30.png"))); // NOI18N
         exit.setText("Log out");
         exit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 exitActionPerformed(evt);
             }
         });
-        getContentPane().add(exit, new org.netbeans.lib.awtextra.AbsoluteConstraints(175, 261, -1, -1));
+        getContentPane().add(exit, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 260, -1, -1));
 
         jLabel1.setBackground(new java.awt.Color(0, 0, 0));
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -108,14 +108,6 @@ public class Admin_frame extends javax.swing.JFrame {
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Student results' information");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 138, 388, -1));
-
-        back.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/icons8-back-arrow-30.png"))); // NOI18N
-        back.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                backActionPerformed(evt);
-            }
-        });
-        getContentPane().add(back, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 40, 30));
 
         exit1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         exit1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/icons8-close-30.png"))); // NOI18N
@@ -166,14 +158,6 @@ public class Admin_frame extends javax.swing.JFrame {
 // TODO add your handling code here:
     }//GEN-LAST:event_list_resultActionPerformed
 
-    private void backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backActionPerformed
-        int response = JOptionPane.showConfirmDialog(null, "You sure you want to leave this page", "Submit", JOptionPane.YES_NO_OPTION);
-
-        if(response == 0){
-            setVisible(false);
-        }
-    }//GEN-LAST:event_backActionPerformed
-
     private void update_resultsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_update_resultsActionPerformed
         Update_result frame = new Update_result();
         frame.setVisible(true);
@@ -181,10 +165,6 @@ public class Admin_frame extends javax.swing.JFrame {
     }//GEN-LAST:event_update_resultsActionPerformed
 
     private void formComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_formComponentShown
-        back.setOpaque(false);
-        back.setContentAreaFilled(false);
-        back.setBorderPainted(false);
-        
         exit1.setOpaque(false);
         exit1.setContentAreaFilled(false);
         exit1.setBorderPainted(false);
@@ -236,7 +216,6 @@ public class Admin_frame extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton add_result;
     private javax.swing.JButton add_student;
-    private javax.swing.JButton back;
     private javax.swing.JButton exit;
     private javax.swing.JButton exit1;
     private javax.swing.JLabel jLabel1;

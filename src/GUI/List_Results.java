@@ -8,7 +8,9 @@ import Connection_provider.Connection_code;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import javax.swing.JComponent;
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableCellRenderer;
 import net.proteanit.sql.DbUtils;
 
 /**
@@ -22,6 +24,7 @@ public class List_Results extends javax.swing.JFrame {
      */
     public List_Results() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -36,10 +39,12 @@ public class List_Results extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         student_Results_tbl = new javax.swing.JTable();
-        back = new javax.swing.JButton();
+        back1 = new javax.swing.JButton();
+        exit1 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(485, 322));
+        setPreferredSize(new java.awt.Dimension(640, 450));
         addComponentListener(new java.awt.event.ComponentAdapter() {
             public void componentShown(java.awt.event.ComponentEvent evt) {
                 formComponentShown(evt);
@@ -50,35 +55,67 @@ public class List_Results extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Results");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 470, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 630, -1));
 
+        jScrollPane1.setBorder(null);
+
+        student_Results_tbl.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         student_Results_tbl.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+
             }
         ));
         jScrollPane1.setViewportView(student_Results_tbl);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 460, 240));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, 610, 240));
 
-        back.setText("back");
-        back.addActionListener(new java.awt.event.ActionListener() {
+        back1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/icons8-back-arrow-30.png"))); // NOI18N
+        back1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                backActionPerformed(evt);
+                back1ActionPerformed(evt);
             }
         });
-        getContentPane().add(back, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        getContentPane().add(back1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 40, 30));
+
+        exit1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        exit1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/icons8-close-30.png"))); // NOI18N
+        exit1.setText("Exit");
+        exit1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                exit1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(exit1, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 10, 90, 30));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/schoolPic2.png"))); // NOI18N
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-60, -200, 700, 620));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void formComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_formComponentShown
+        //set back button transparent
+        back1.setOpaque(false);
+        back1.setContentAreaFilled(false);
+        back1.setBorderPainted(false);
+        
+        //set exit button transparent
+        exit1.setOpaque(false);
+        exit1.setContentAreaFilled(false);
+        exit1.setBorderPainted(false);
+        
+        //set teh table area as transparent
+        student_Results_tbl.setOpaque(false);
+        ((DefaultTableCellRenderer)student_Results_tbl.getDefaultRenderer(Object.class)).setOpaque(false);
+        ((DefaultTableCellRenderer)student_Results_tbl.getDefaultRenderer(String.class)).setOpaque(false);
+        ((JComponent)student_Results_tbl.getDefaultRenderer(Boolean.class)).setOpaque(false);
+        
+        jScrollPane1.setOpaque(false);
+        jScrollPane1.getViewport().setOpaque(false);
+        
         try{
             Connection con = Connection_code.get_con();
             Statement st = con.createStatement();
@@ -87,17 +124,25 @@ public class List_Results extends javax.swing.JFrame {
             student_Results_tbl.setModel(DbUtils.resultSetToTableModel(rs));
         }
         catch(Exception e){
-            JOptionPane.showMessageDialog(null, e.toString());
+            JOptionPane.showMessageDialog(this, e.toString());
         }
     }//GEN-LAST:event_formComponentShown
 
-    private void backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backActionPerformed
-        int response = JOptionPane.showConfirmDialog(null, "You sure you want to leave this page", "Submit", JOptionPane.YES_NO_OPTION);
+    private void back1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_back1ActionPerformed
+        int response = JOptionPane.showConfirmDialog(this, "You sure you want to leave this page", "Submit", JOptionPane.YES_NO_OPTION);
 
         if(response == 0){
             setVisible(false);
         }
-    }//GEN-LAST:event_backActionPerformed
+    }//GEN-LAST:event_back1ActionPerformed
+
+    private void exit1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exit1ActionPerformed
+        int response = JOptionPane.showConfirmDialog(this, "You sure you want to exit", "Submit", JOptionPane.YES_NO_OPTION);
+
+        if(response == 0){
+            System.exit(0);
+        }
+    }//GEN-LAST:event_exit1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -136,8 +181,10 @@ public class List_Results extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton back;
+    private javax.swing.JButton back1;
+    private javax.swing.JButton exit1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable student_Results_tbl;
     // End of variables declaration//GEN-END:variables

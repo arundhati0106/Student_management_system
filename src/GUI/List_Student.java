@@ -67,12 +67,12 @@ public class List_Student extends javax.swing.JFrame {
         student_list.setGridColor(new java.awt.Color(0, 0, 0));
         jScrollPane1.setViewportView(student_list);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, 590, 190));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, 610, 190));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("List of Students");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, 610, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, 630, -1));
 
         back1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/icons8-back-arrow-30.png"))); // NOI18N
         back1.addActionListener(new java.awt.event.ActionListener() {
@@ -90,7 +90,7 @@ public class List_Student extends javax.swing.JFrame {
                 exit1ActionPerformed(evt);
             }
         });
-        getContentPane().add(exit1, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 10, 90, 30));
+        getContentPane().add(exit1, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 10, 90, 30));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/schoolPic2.png"))); // NOI18N
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-70, -220, 1510, 670));

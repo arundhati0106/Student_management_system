@@ -148,7 +148,7 @@ public class Admin_login extends javax.swing.JFrame {
         warning_lbl.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
         warning_lbl.setForeground(new java.awt.Color(0, 102, 255));
         warning_lbl.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(warning_lbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 120, 150, 20));
+        getContentPane().add(warning_lbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, 270, 20));
 
         exit.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         exit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/icons8-close-30.png"))); // NOI18N

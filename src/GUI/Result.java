@@ -81,9 +81,11 @@ public class Result extends javax.swing.JFrame {
         name_txt = new javax.swing.JTextField();
         father_name_txt = new javax.swing.JTextField();
         jLabel35 = new javax.swing.JLabel();
-        back = new javax.swing.JButton();
         jLabel25 = new javax.swing.JLabel();
         jLabel26 = new javax.swing.JLabel();
+        back1 = new javax.swing.JButton();
+        exit1 = new javax.swing.JButton();
+        jLabel8 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(645, 630));
@@ -94,69 +96,88 @@ public class Result extends javax.swing.JFrame {
         });
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel1.setText("Roll no.");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 50, 70, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 70, 70, -1));
 
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel2.setText("Name");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 50, -1, -1));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 70, -1, -1));
 
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel3.setText("Gender");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 100, -1, -1));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 120, -1, -1));
 
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel5.setText("Course");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 150, -1, -1));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 170, -1, -1));
 
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel4.setText("Father Name");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 100, -1, -1));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 120, -1, -1));
 
+        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel6.setText("Branch");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 150, -1, -1));
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 170, -1, -1));
 
         course_txt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 course_txtActionPerformed(evt);
             }
         });
-        getContentPane().add(course_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 150, 170, -1));
+        getContentPane().add(course_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 170, 170, -1));
 
+        jLabel12.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel12.setText("100");
-        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 250, -1, -1));
+        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 270, -1, -1));
 
+        jLabel13.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel13.setText("100");
-        getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 290, -1, -1));
+        getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 310, -1, -1));
 
+        jLabel14.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel14.setText("100");
-        getContentPane().add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 330, -1, -1));
+        getContentPane().add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 350, -1, -1));
 
+        jLabel15.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel15.setText("100");
-        getContentPane().add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 370, -1, -1));
+        getContentPane().add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 390, -1, -1));
 
+        jLabel16.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel16.setText("100");
-        getContentPane().add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 490, -1, -1));
+        getContentPane().add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 510, -1, -1));
 
+        jLabel17.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel17.setText("30");
-        getContentPane().add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 250, -1, -1));
+        getContentPane().add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 270, -1, -1));
 
+        jLabel18.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel18.setText("30");
-        getContentPane().add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 290, -1, -1));
+        getContentPane().add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 310, -1, -1));
 
+        jLabel19.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel19.setText("30");
-        getContentPane().add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 330, -1, -1));
+        getContentPane().add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 350, -1, -1));
 
+        jLabel20.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel20.setText("30");
-        getContentPane().add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 370, -1, -1));
+        getContentPane().add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 390, -1, -1));
 
+        jLabel21.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel21.setText("180");
-        getContentPane().add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 490, -1, -1));
+        getContentPane().add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 510, -1, -1));
 
+        jLabel22.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel22.setText("Total Marks");
-        getContentPane().add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 200, -1, -1));
+        getContentPane().add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 220, -1, -1));
 
+        jLabel23.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel23.setText("Passing Marks");
-        getContentPane().add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 200, -1, -1));
+        getContentPane().add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 220, -1, -1));
 
+        jLabel24.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel24.setText("Marks Obtained");
-        getContentPane().add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 200, -1, 20));
+        getContentPane().add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 220, -1, 20));
 
         pass_fail.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         pass_fail.addActionListener(new java.awt.event.ActionListener() {
@@ -164,137 +185,161 @@ public class Result extends javax.swing.JFrame {
                 pass_failActionPerformed(evt);
             }
         });
-        getContentPane().add(pass_fail, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 530, 100, -1));
+        getContentPane().add(pass_fail, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 550, 100, -1));
 
+        jLabel27.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel27.setText("Total");
-        getContentPane().add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 490, -1, -1));
+        getContentPane().add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 510, -1, -1));
 
+        jLabel28.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel28.setText("Physics");
-        getContentPane().add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 250, -1, -1));
+        getContentPane().add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 270, -1, -1));
 
+        jLabel29.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel29.setText("Chemistry");
-        getContentPane().add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 290, -1, -1));
+        getContentPane().add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 310, -1, -1));
 
+        jLabel30.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel30.setText("Maths");
-        getContentPane().add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 330, 50, -1));
+        getContentPane().add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 350, 50, -1));
 
+        jLabel31.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel31.setText("English");
-        getContentPane().add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 370, -1, -1));
+        getContentPane().add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 390, -1, -1));
 
+        jLabel32.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel32.setText("Soft Skills");
-        getContentPane().add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 410, 70, -1));
+        getContentPane().add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 430, 70, -1));
 
+        jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel7.setText("Aptitude");
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 450, -1, -1));
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 470, -1, -1));
 
+        jLabel33.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel33.setText("30");
-        getContentPane().add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 410, -1, -1));
+        getContentPane().add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 430, -1, -1));
 
+        jLabel34.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel34.setText("100");
-        getContentPane().add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 410, -1, -1));
+        getContentPane().add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 430, -1, -1));
 
         physics_txt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 physics_txtActionPerformed(evt);
             }
         });
-        getContentPane().add(physics_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 250, 50, -1));
+        getContentPane().add(physics_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 270, 50, -1));
 
         chemistry_txt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 chemistry_txtActionPerformed(evt);
             }
         });
-        getContentPane().add(chemistry_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 290, 50, -1));
+        getContentPane().add(chemistry_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 310, 50, -1));
 
         maths_txt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 maths_txtActionPerformed(evt);
             }
         });
-        getContentPane().add(maths_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 330, 50, -1));
+        getContentPane().add(maths_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 350, 50, -1));
 
         english_txt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 english_txtActionPerformed(evt);
             }
         });
-        getContentPane().add(english_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 370, 50, -1));
+        getContentPane().add(english_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 390, 50, -1));
 
         softSkills_txt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 softSkills_txtActionPerformed(evt);
             }
         });
-        getContentPane().add(softSkills_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 410, 50, -1));
+        getContentPane().add(softSkills_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 430, 50, -1));
 
         total_marks_txt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 total_marks_txtActionPerformed(evt);
             }
         });
-        getContentPane().add(total_marks_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 490, 50, -1));
+        getContentPane().add(total_marks_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 510, 50, -1));
 
         aptitude_txt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 aptitude_txtActionPerformed(evt);
             }
         });
-        getContentPane().add(aptitude_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 450, 50, -1));
+        getContentPane().add(aptitude_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 470, 50, -1));
 
         rollno_txt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 rollno_txtActionPerformed(evt);
             }
         });
-        getContentPane().add(rollno_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 50, 110, -1));
+        getContentPane().add(rollno_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 70, 110, -1));
 
         gender_txt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 gender_txtActionPerformed(evt);
             }
         });
-        getContentPane().add(gender_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 100, 110, -1));
+        getContentPane().add(gender_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 120, 110, -1));
 
         branch_txt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 branch_txtActionPerformed(evt);
             }
         });
-        getContentPane().add(branch_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 150, 110, -1));
+        getContentPane().add(branch_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 170, 110, -1));
 
         name_txt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 name_txtActionPerformed(evt);
             }
         });
-        getContentPane().add(name_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 50, 170, -1));
+        getContentPane().add(name_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 70, 170, -1));
 
         father_name_txt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 father_name_txtActionPerformed(evt);
             }
         });
-        getContentPane().add(father_name_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 100, 170, -1));
+        getContentPane().add(father_name_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 120, 170, -1));
 
         jLabel35.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel35.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel35.setText("Verdict");
-        getContentPane().add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 530, 280, -1));
+        getContentPane().add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 550, 280, -1));
 
-        back.setText("back");
-        back.addActionListener(new java.awt.event.ActionListener() {
+        jLabel25.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel25.setText("100");
+        getContentPane().add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 470, -1, -1));
+
+        jLabel26.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel26.setText("30");
+        getContentPane().add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 470, -1, -1));
+
+        back1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/icons8-back-arrow-30.png"))); // NOI18N
+        back1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                backActionPerformed(evt);
+                back1ActionPerformed(evt);
             }
         });
-        getContentPane().add(back, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        getContentPane().add(back1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 40, 30));
 
-        jLabel25.setText("100");
-        getContentPane().add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 450, -1, -1));
+        exit1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        exit1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/icons8-close-30.png"))); // NOI18N
+        exit1.setText("Exit");
+        exit1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                exit1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(exit1, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 10, 90, 30));
 
-        jLabel26.setText("30");
-        getContentPane().add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 450, -1, -1));
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/schoolPic2.png"))); // NOI18N
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(-80, -100, 1020, 810));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -355,15 +400,18 @@ public class Result extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_father_name_txtActionPerformed
 
-    private void backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backActionPerformed
-        int response = JOptionPane.showConfirmDialog(null, "You sure you want to leave this page", "Submit", JOptionPane.YES_NO_OPTION);
-
-        if(response == 0){
-            setVisible(false);
-        }
-    }//GEN-LAST:event_backActionPerformed
-
     private void formComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_formComponentShown
+        //set back button transparent
+        back1.setOpaque(false);
+        back1.setContentAreaFilled(false);
+        back1.setBorderPainted(false);
+        
+        //set exit button transparent
+        exit1.setOpaque(false);
+        exit1.setContentAreaFilled(false);
+        exit1.setBorderPainted(false);
+        
+
         String rollNo =rollno_txt.getText();
         try{
             Connection con = Connection_code.get_con();
@@ -371,7 +419,7 @@ public class Result extends javax.swing.JFrame {
                 ResultSet.CONCUR_UPDATABLE);
             ResultSet rs = st.executeQuery("select * from student natural join result where rollno =" + rollNo + ";");
             if(!rs.first()){
-                JOptionPane.showMessageDialog(null, "Entered rollNo doesn't exist");
+                JOptionPane.showMessageDialog(this, "Entered rollNo doesn't exist");
             }
             else{
                 //rollno | name   | gender | father_name | course | branch_name | physics | maths | chem | aptitude | english | softskill | total
@@ -439,7 +487,7 @@ public class Result extends javax.swing.JFrame {
                 }
                 
                 if(count >= 2 || m7<pass_cutOff) {
-                    pass_fail.setText(count + "");
+                    pass_fail.setText("Fail" + "");
                     pass_fail.setForeground(Color.red);
                 }
                 else{
@@ -449,9 +497,25 @@ public class Result extends javax.swing.JFrame {
             }
         }
         catch(Exception e){
-            JOptionPane.showMessageDialog(null, e.toString());
+            JOptionPane.showMessageDialog(this, e.toString());
         }
     }//GEN-LAST:event_formComponentShown
+
+    private void back1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_back1ActionPerformed
+        int response = JOptionPane.showConfirmDialog(this, "You sure you want to leave this page", "Submit", JOptionPane.YES_NO_OPTION);
+
+        if(response == 0){
+            setVisible(false);
+        }
+    }//GEN-LAST:event_back1ActionPerformed
+
+    private void exit1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exit1ActionPerformed
+        int response = JOptionPane.showConfirmDialog(this, "You sure you want to exit", "Submit", JOptionPane.YES_NO_OPTION);
+
+        if(response == 0){
+            System.exit(0);
+        }
+    }//GEN-LAST:event_exit1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -490,11 +554,12 @@ public class Result extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField aptitude_txt;
-    private javax.swing.JButton back;
+    private javax.swing.JButton back1;
     private javax.swing.JTextField branch_txt;
     private javax.swing.JTextField chemistry_txt;
     private javax.swing.JTextField course_txt;
     private javax.swing.JTextField english_txt;
+    private javax.swing.JButton exit1;
     private javax.swing.JTextField father_name_txt;
     private javax.swing.JTextField gender_txt;
     private javax.swing.JLabel jLabel1;
@@ -528,6 +593,7 @@ public class Result extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JTextField maths_txt;
     private javax.swing.JTextField name_txt;
     private javax.swing.JTextField pass_fail;
