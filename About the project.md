@@ -1,5 +1,15 @@
-# Student_management_system
-- Built a Student Result management system GUI application to help the admin store various data such as course result declaration , student details and to help student's check their own result.
-- Added functionaly for admin to add/list student detail , add/list/update student result and for student to search for their result.
-- Used mysql database to store/fetch data entered into the GUI.
-- Made the application using java swing, awt and mysql database.
+# Student management system
+# Technologies Used
+- Java Swing, AWT
+- NetBeans IDE 15
+- MySQL
+
+# Features
+- Made the appication GUI using Java Swing, AWT
+- Built a Student Result Management System GUI to help the admin store various data, such as course result declaration , student details
+- There's another login feature to help student's check their own result.
+- Added functionalityy for admin to add/list student detail , add/list/update student result; for students to search for their result.
+
+# Further Exploration
+- Make and maintain tables of username and password in the data base, instead of hardcoding sor more flexibility
+- Add functionality to add more users, avilable only to admins.
